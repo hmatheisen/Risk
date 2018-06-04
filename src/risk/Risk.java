@@ -37,8 +37,8 @@ public class Risk extends Application {
         stage.setResizable(false);
         CARTES.add(new CarteUIMonde());
         this.stage = stage;
-        this.gotoPane(new AccueilPane(this),"accueilStyle.css");
-        this.gotoPane(new MenuPane(this), "menuStyle.css");
+//        this.gotoPane(new AccueilPane(this),"accueilStyle.css");
+//        this.gotoPane(new MenuPane(this), "menuStyle.css");
         this.jouer(6, 0, CARTES.get(0));
     }
 

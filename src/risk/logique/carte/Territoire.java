@@ -3,6 +3,8 @@ package risk.logique.carte;
 import risk.logique.joueurs.Joueur;
 import risk.logique.units.Army;
 
+import java.util.ArrayList;
+
 public class Territoire {
 
     private Region region;

@@ -1,7 +1,11 @@
 package risk.components;
 
 import risk.logique.carte.Region;
+import risk.logique.carte.Territoire;
 import risk.panes.GamePane;
+
+import java.util.ArrayList;
+import java.util.Objects;
 
 public class CarteUIMonde extends CarteUI {
 
@@ -128,5 +132,194 @@ public class CarteUIMonde extends CarteUI {
         this.territoiresUI.add(new TerritoireUI(this.game, "M3", "Nouvelle Guinée", 1007, 314));
         this.territoiresUI.add(new TerritoireUI(this.game, "M4", "Océanie Occidentale", 932, 412));
         // ---------------------------------------------------------------------------------------------------------
+
+        //Argentine
+        this.getTerritoireUIById("R1").addTerritoireAdjacent(this.getTerritoireUIById("R2"));
+        this.getTerritoireUIById("R1").addTerritoireAdjacent(this.getTerritoireUIById("R3"));
+
+        //Brésil
+        this.getTerritoireUIById("R2").addTerritoireAdjacent(this.getTerritoireUIById("R1"));
+        this.getTerritoireUIById("R2").addTerritoireAdjacent(this.getTerritoireUIById("R3"));
+        this.getTerritoireUIById("R2").addTerritoireAdjacent(this.getTerritoireUIById("R4"));
+        this.getTerritoireUIById("R2").addTerritoireAdjacent(this.getTerritoireUIById("O5"));
+
+        //Pérou
+        this.getTerritoireUIById("R3").addTerritoireAdjacent(this.getTerritoireUIById("R1"));
+        this.getTerritoireUIById("R3").addTerritoireAdjacent(this.getTerritoireUIById("R2"));
+        this.getTerritoireUIById("R3").addTerritoireAdjacent(this.getTerritoireUIById("R4"));
+
+        //Vénézuela
+        this.getTerritoireUIById("R4").addTerritoireAdjacent(this.getTerritoireUIById("R2"));
+        this.getTerritoireUIById("R4").addTerritoireAdjacent(this.getTerritoireUIById("R3"));
+
+        //--------
+
+        //Grande-Bretagne
+        this.getTerritoireUIById("B1").addTerritoireAdjacent(this.getTerritoireUIById("B7"));
+        this.getTerritoireUIById("B1").addTerritoireAdjacent(this.getTerritoireUIById("B3"));
+        this.getTerritoireUIById("B1").addTerritoireAdjacent(this.getTerritoireUIById("B4"));
+        this.getTerritoireUIById("B1").addTerritoireAdjacent(this.getTerritoireUIById("B2"));
+
+        //Islande
+        this.getTerritoireUIById("B2").addTerritoireAdjacent(this.getTerritoireUIById("J5"));
+        this.getTerritoireUIById("B2").addTerritoireAdjacent(this.getTerritoireUIById("B1"));
+        this.getTerritoireUIById("B2").addTerritoireAdjacent(this.getTerritoireUIById("B4"));
+
+        //Europe du Nord
+        this.getTerritoireUIById("B3").addTerritoireAdjacent(this.getTerritoireUIById("B1"));
+        this.getTerritoireUIById("B3").addTerritoireAdjacent(this.getTerritoireUIById("B4"));
+        this.getTerritoireUIById("B3").addTerritoireAdjacent(this.getTerritoireUIById("B6"));
+        this.getTerritoireUIById("B3").addTerritoireAdjacent(this.getTerritoireUIById("B5"));
+        this.getTerritoireUIById("B3").addTerritoireAdjacent(this.getTerritoireUIById("B7"));
+
+        //Scandinavie
+        this.getTerritoireUIById("B4").addTerritoireAdjacent(this.getTerritoireUIById("B6"));
+        this.getTerritoireUIById("B4").addTerritoireAdjacent(this.getTerritoireUIById("B3"));
+        this.getTerritoireUIById("B4").addTerritoireAdjacent(this.getTerritoireUIById("B1"));
+        this.getTerritoireUIById("B4").addTerritoireAdjacent(this.getTerritoireUIById("B2"));
+
+        //Europe du Sud
+        this.getTerritoireUIById("B5").addTerritoireAdjacent(this.getTerritoireUIById("B7"));
+        this.getTerritoireUIById("B5").addTerritoireAdjacent(this.getTerritoireUIById("B3"));
+        this.getTerritoireUIById("B5").addTerritoireAdjacent(this.getTerritoireUIById("V7"));
+        this.getTerritoireUIById("B5").addTerritoireAdjacent(this.getTerritoireUIById("O3"));
+        this.getTerritoireUIById("B5").addTerritoireAdjacent(this.getTerritoireUIById("O5"));
+
+        //Ukraine
+        this.getTerritoireUIById("B6").addTerritoireAdjacent(this.getTerritoireUIById("B4"));
+        this.getTerritoireUIById("B6").addTerritoireAdjacent(this.getTerritoireUIById("B3"));
+        this.getTerritoireUIById("B6").addTerritoireAdjacent(this.getTerritoireUIById("B5"));
+        this.getTerritoireUIById("B6").addTerritoireAdjacent(this.getTerritoireUIById("V7"));
+        this.getTerritoireUIById("B6").addTerritoireAdjacent(this.getTerritoireUIById("V1"));
+        this.getTerritoireUIById("B6").addTerritoireAdjacent(this.getTerritoireUIById("V11"));
+
+        //Europe de l'Ouest
+        this.getTerritoireUIById("B7").addTerritoireAdjacent(this.getTerritoireUIById("B1"));
+        this.getTerritoireUIById("B7").addTerritoireAdjacent(this.getTerritoireUIById("O5"));
+        this.getTerritoireUIById("B7").addTerritoireAdjacent(this.getTerritoireUIById("B5"));
+        this.getTerritoireUIById("B7").addTerritoireAdjacent(this.getTerritoireUIById("B3"));
+
+        //--------
+
+        //Alaska
+        this.getTerritoireUIById("J1").addTerritoireAdjacent(this.getTerritoireUIById("J2"));
+        this.getTerritoireUIById("J1").addTerritoireAdjacent(this.getTerritoireUIById("J6"));
+        this.getTerritoireUIById("J1").addTerritoireAdjacent(this.getTerritoireUIById("V6"));
+
+        //Alberta
+        this.getTerritoireUIById("J2").addTerritoireAdjacent(this.getTerritoireUIById("J1"));
+        this.getTerritoireUIById("J2").addTerritoireAdjacent(this.getTerritoireUIById("J6"));
+        this.getTerritoireUIById("J2").addTerritoireAdjacent(this.getTerritoireUIById("J7"));
+        this.getTerritoireUIById("J2").addTerritoireAdjacent(this.getTerritoireUIById("J9"));
+
+        //Amérique Centrale
+        this.getTerritoireUIById("J3").addTerritoireAdjacent(this.getTerritoireUIById("J9"));
+        this.getTerritoireUIById("J3").addTerritoireAdjacent(this.getTerritoireUIById("J4"));
+        this.getTerritoireUIById("J3").addTerritoireAdjacent(this.getTerritoireUIById("R4"));
+
+        //Etat de l'Est
+        this.getTerritoireUIById("J4").addTerritoireAdjacent(this.getTerritoireUIById("J7"));
+        this.getTerritoireUIById("J4").addTerritoireAdjacent(this.getTerritoireUIById("J8"));
+        this.getTerritoireUIById("J4").addTerritoireAdjacent(this.getTerritoireUIById("J2"));
+        this.getTerritoireUIById("J4").addTerritoireAdjacent(this.getTerritoireUIById("J9"));
+        this.getTerritoireUIById("J4").addTerritoireAdjacent(this.getTerritoireUIById("J3"));
+
+        //Groënland
+        this.getTerritoireUIById("J5").addTerritoireAdjacent(this.getTerritoireUIById("J6"));
+        this.getTerritoireUIById("J5").addTerritoireAdjacent(this.getTerritoireUIById("J7"));
+        this.getTerritoireUIById("J5").addTerritoireAdjacent(this.getTerritoireUIById("J8"));
+        this.getTerritoireUIById("J5").addTerritoireAdjacent(this.getTerritoireUIById("B2"));
+
+        //Territoire du Nord-Ouest
+        this.getTerritoireUIById("J6").addTerritoireAdjacent(this.getTerritoireUIById("J1"));
+        this.getTerritoireUIById("J6").addTerritoireAdjacent(this.getTerritoireUIById("J2"));
+        this.getTerritoireUIById("J6").addTerritoireAdjacent(this.getTerritoireUIById("J7"));
+        this.getTerritoireUIById("J6").addTerritoireAdjacent(this.getTerritoireUIById("J5"));
+
+        //Ontario
+        this.getTerritoireUIById("J7").addTerritoireAdjacent(this.getTerritoireUIById("J5"));
+        this.getTerritoireUIById("J7").addTerritoireAdjacent(this.getTerritoireUIById("J6"));
+        this.getTerritoireUIById("J7").addTerritoireAdjacent(this.getTerritoireUIById("J2"));
+        this.getTerritoireUIById("J7").addTerritoireAdjacent(this.getTerritoireUIById("J9"));
+        this.getTerritoireUIById("J7").addTerritoireAdjacent(this.getTerritoireUIById("J4"));
+        this.getTerritoireUIById("J7").addTerritoireAdjacent(this.getTerritoireUIById("J8"));
+
+        //Québec
+        this.getTerritoireUIById("J8").addTerritoireAdjacent(this.getTerritoireUIById("J5"));
+        this.getTerritoireUIById("J8").addTerritoireAdjacent(this.getTerritoireUIById("J7"));
+        this.getTerritoireUIById("J8").addTerritoireAdjacent(this.getTerritoireUIById("J4"));
+
+        //Etats de l'Ouest
+        this.getTerritoireUIById("J9").addTerritoireAdjacent(this.getTerritoireUIById("J2"));
+        this.getTerritoireUIById("J9").addTerritoireAdjacent(this.getTerritoireUIById("J7"));
+        this.getTerritoireUIById("J9").addTerritoireAdjacent(this.getTerritoireUIById("J4"));
+        this.getTerritoireUIById("J9").addTerritoireAdjacent(this.getTerritoireUIById("J3"));
+
+        //--------
+
+        //Congo
+        this.getTerritoireUIById("O1").addTerritoireAdjacent(this.getTerritoireUIById("O2"));
+        this.getTerritoireUIById("O1").addTerritoireAdjacent(this.getTerritoireUIById("O5"));
+        this.getTerritoireUIById("O1").addTerritoireAdjacent(this.getTerritoireUIById("O6"));
+
+        //Afrique Orientale
+        this.getTerritoireUIById("O2").addTerritoireAdjacent(this.getTerritoireUIById("O1"));
+        this.getTerritoireUIById("O2").addTerritoireAdjacent(this.getTerritoireUIById("O6"));
+        this.getTerritoireUIById("O2").addTerritoireAdjacent(this.getTerritoireUIById("O4"));
+        this.getTerritoireUIById("O2").addTerritoireAdjacent(this.getTerritoireUIById("V7"));
+
+        //Egypte
+        this.getTerritoireUIById("O3").addTerritoireAdjacent(this.getTerritoireUIById("O2"));
+        this.getTerritoireUIById("O3").addTerritoireAdjacent(this.getTerritoireUIById("O5"));
+        this.getTerritoireUIById("O3").addTerritoireAdjacent(this.getTerritoireUIById("V7"));
+        this.getTerritoireUIById("O3").addTerritoireAdjacent(this.getTerritoireUIById("B5"));
+
+        //Madagascar
+        this.getTerritoireUIById("O4").addTerritoireAdjacent(this.getTerritoireUIById("O2"));
+        this.getTerritoireUIById("O4").addTerritoireAdjacent(this.getTerritoireUIById("O6"));
+
+        //Afrique du Nord
+        this.getTerritoireUIById("O5").addTerritoireAdjacent(this.getTerritoireUIById("R2"));
+        this.getTerritoireUIById("O5").addTerritoireAdjacent(this.getTerritoireUIById("B7"));
+        this.getTerritoireUIById("O5").addTerritoireAdjacent(this.getTerritoireUIById("B5"));
+        this.getTerritoireUIById("O5").addTerritoireAdjacent(this.getTerritoireUIById("O3"));
+        this.getTerritoireUIById("O5").addTerritoireAdjacent(this.getTerritoireUIById("O2"));
+        this.getTerritoireUIById("O5").addTerritoireAdjacent(this.getTerritoireUIById("O1"));
+
+        //Afrique du Sud
+        this.getTerritoireUIById("O6").addTerritoireAdjacent(this.getTerritoireUIById("O1"));
+        this.getTerritoireUIById("O6").addTerritoireAdjacent(this.getTerritoireUIById("O2"));
+        this.getTerritoireUIById("O6").addTerritoireAdjacent(this.getTerritoireUIById("O4"));
+
+        //--------
+
+        //Océanie orientale
+        this.getTerritoireUIById("M1").addTerritoireAdjacent(this.getTerritoireUIById("M3"));
+        this.getTerritoireUIById("M1").addTerritoireAdjacent(this.getTerritoireUIById("M4"));
+
+        //Indonésie
+        this.getTerritoireUIById("M2").addTerritoireAdjacent(this.getTerritoireUIById("M4"));
+        this.getTerritoireUIById("M2").addTerritoireAdjacent(this.getTerritoireUIById("M3"));
+        this.getTerritoireUIById("M2").addTerritoireAdjacent(this.getTerritoireUIById("V9"));
+
+        //Nouvelle Guinée
+        this.getTerritoireUIById("M3").addTerritoireAdjacent(this.getTerritoireUIById("M1"));
+        this.getTerritoireUIById("M3").addTerritoireAdjacent(this.getTerritoireUIById("M2"));
+        this.getTerritoireUIById("M3").addTerritoireAdjacent(this.getTerritoireUIById("M4"));
+
+        //Océanie Occidentale
+        this.getTerritoireUIById("M4").addTerritoireAdjacent(this.getTerritoireUIById("M1"));
+        this.getTerritoireUIById("M4").addTerritoireAdjacent(this.getTerritoireUIById("M2"));
+        this.getTerritoireUIById("M4").addTerritoireAdjacent(this.getTerritoireUIById("M3"));
+
+    }
+
+    private TerritoireUI getTerritoireUIById(String id) {
+        for (TerritoireUI territoireUI : this.territoiresUI) {
+            if (Objects.equals(territoireUI.getId(), id)) {
+                return territoireUI;
+            }
+        }
+        return null;
     }
 }

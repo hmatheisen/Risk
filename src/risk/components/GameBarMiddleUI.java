@@ -44,7 +44,7 @@ public class GameBarMiddleUI {
         this.titleText.setText("");
         if (this.game.getRisk().getJoueurs().get(this.game.getActualPlayer()).getRenforts() != 0) {
             //this.logo.setImage();
-            // this.imageView = new ImageView(new Image("file:///" + new File("img/territoires/" + id + ".png").getAbsolutePath().replace("\\", "/")));
+            //this.imageView = new ImageView(new Image("file:///" + new File("img/territoires/" + id + ".png").getAbsolutePath().replace("\\", "/")));
             this.renfortUI.refresh();
             if (this.game.getTerritoireUIActuel() != null && this.game.getTerritoireUIActuel().getJoueur() == this.game.getRisk().getJoueurs().get(this.game.getActualPlayer())) {
                 this.subBox.getChildren().add(this.renfortUI);

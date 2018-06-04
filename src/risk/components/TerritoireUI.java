@@ -10,6 +10,7 @@ import risk.logique.units.Army;
 import risk.panes.GamePane;
 
 import java.io.File;
+import java.util.ArrayList;
 
 public class TerritoireUI {
 
@@ -18,6 +19,7 @@ public class TerritoireUI {
     private int x, y;
     private ImageView imageView;
     private GamePane game;
+    private ArrayList<TerritoireUI> territoiresAdjacents = new ArrayList<>();
 
     public TerritoireUI(GamePane game, String id, String nom, int x, int y) {
         this.game = game;
@@ -56,6 +58,11 @@ public class TerritoireUI {
         });
     }
 
+    public void addTerritoireAdjacent(TerritoireUI territoireUI) {
+        this.territoiresAdjacents.add(territoireUI);
+    }
+
+
     // ---------------------------------------------------------------------------------------------------------
     // Getters & Setters
     // ---------------------------------------------------------------------------------------------------------
@@ -89,5 +96,9 @@ public class TerritoireUI {
 
     public boolean isEmpty() {
         return this.getArmy().getUnits().size() == 0;
+    }
+
+    public Territoire getTerritoire() {
+        return territoire;
     }
 }
