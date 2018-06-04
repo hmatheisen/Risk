@@ -1,0 +1,79 @@
+.menuBox {
+    -fx-display: flex;
+    -fx-alignment: center;
+    -fx-max-width: 600px;
+    -fx-max-height: 100%;
+    /*-fx-background-color: lightgray;*/
+    /*-fx-opacity: 90%;*/
+}
+
+/* TITRE */
+
+.titreBox {
+    -fx-alignment: center;
+    -fx-font-size: 65px;
+    -fx-background-color: #5d4037;
+    -fx-padding: 15px;
+    -fx-opacity:95%;
+}
+
+.titreBox-text {
+    -fx-fill: white;
+}
+
+/* SELECTIONS */
+
+.selectionsBox {
+    -fx-font-size: 27px;
+    -fx-padding: 10px 30px;
+    -fx-background-color: lightgray;
+    -fx-opacity: 90%;
+}
+
+.selectionsBox-label {
+    -fx-min-width: 430px;
+    -fx-alignment: center-left;
+    -fx-background-color: gray;
+}
+
+.selectionsBox-label-text {
+    -fx-fill: #5d4037;
+    }
+
+.selectionsBox-label-text.bold {
+    -fx-font-weight: bold;
+}
+
+.selectionsBox-selection {
+    -fx-alignment: center;
+    -fx-min-width: 300px;
+    -fx-background-color: gray;
+}
+
+/* BTNS */
+
+.btnsBox {
+    -fx-alignment: center-right;
+    -fx-padding: 20px 40px;
+}
+
+.btnLaunch {
+    -fx-padding: 13px 38px;
+    -fx-background-color: #5cb85c;
+    -fx-font-size: 30px;
+    -fx-background-radius: 5px;
+}
+
+.btnLaunch-text {
+    -fx-fill: white;
+}
+
+.test{
+    -fx-background-color: red;
+    -fx-background-size: auto;
+    /*-fx-background-image: "/img/Accueil.png";*/
+}
+
+.backround{
+    -fx-background-size: contain;
+}

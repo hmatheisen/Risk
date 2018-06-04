@@ -1,0 +1,49 @@
+.accueilBox{
+    -fx-alignment: bottom-center;
+    /*-fx-background-color: red;*/
+}
+
+
+/* BTNS */
+
+.btnsBox {
+    -fx-padding: 20px 40px;
+}
+
+.btnLaunch {
+    -fx-alignment: center-right;
+    -fx-padding: 13px 38px;
+    -fx-background-color: lightgray;
+    -fx-background-radius: 5px;
+    -fx-font-size: 50px;
+    -fx-opacity: 0.75;
+
+
+}
+
+.btnLaunch-text {
+    -fx-alignment: center;
+    -fx-fill: #3B3838;
+    -fx-font-weight: bold;
+
+}
+
+.footerBox{
+    -fx-alignment: center;
+    -fx-background-color: lightgray;
+    -fx-padding: 5px;
+    -fx-font-size: 25px;
+    -fx-opacity: 0.75;
+
+
+}
+
+.footerBox-text{
+    -fx-fill: #9A454E;
+    -fx-font-weight: bold;
+}
+
+.btnsBox2{
+    -fx-alignment: center;
+    /*-fx-background-color: red;*/
+}

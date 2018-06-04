@@ -1,0 +1,137 @@
+/*
+ * WORLDBOX
+ */
+
+.worldBox {
+    -fx-display: flex;
+    -fx-min-width: 100%;
+    -fx-background-color: lightblue;
+}
+
+.worldBox-nbTour {
+    -fx-font-size: 17px;
+}
+
+/*
+ * GAMEBARBOX
+ */
+
+.gameBarBox {
+    -fx-min-height: 242;
+}
+
+.gameBarBox-terminal {
+    -fx-min-height: 100%;
+}
+
+.gameBarBox-terminal > .scroll-pane {
+    -fx-vbar-policy: always;
+    -fx-hbar-policy: never;
+}
+
+.gameBarVBox {
+    -fx-min-width: 720;
+}
+
+.gameBarVBoxTop {
+    -fx-min-height: 182;
+    -fx-padding: 10;
+}
+
+.gameBarVBoxBottom {
+    -fx-min-height: 60;
+    -fx-alignment: center;
+}
+
+.infosBouton {
+    -fx-max-height: 45;
+    -fx-background-color: #5cb85c;
+    -fx-background-radius: 8;
+    -fx-padding: 9px 13px;
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+    -fx-min-width: 177;
+    -fx-alignment: center;
+}
+
+.infosJoueurs {
+    -fx-min-width: 553;
+    -fx-alignment: center-left;
+    -fx-padding: 10px 30px 10px 0;
+}
+
+.infosJoueur {
+    -fx-alignment: center;
+    -fx-padding: 7px 12px;
+    -fx-background-color: lightgray;
+}
+
+.infosJoueur.actuel {
+    -fx-background-color: #8d6e63;
+}
+
+.infosJoueur-txt {
+    -fx-font-weight: normal;
+    -fx-fill: black;
+}
+
+.infosJoueur-txt.actuel {
+    -fx-font-weight: bold;
+    -fx-fill: white;
+}
+
+.infosSource, .infosCible {
+    -fx-background-color: #8d6e63;
+    -fx-min-width: 365;
+    -fx-padding: 7;
+    -fx-max-height: 60;
+    -fx-background-radius: 3;
+}
+
+.infosSource-sub, .infosCible-sub {
+    -fx-alignment: center-left;
+    -fx-padding: 0 0 0 10;
+}
+
+.infosSource-territoire, .infosCible-territoire {
+    -fx-fill: white;
+    -fx-font-size: 14px;
+}
+
+.infosSource-sub-player, .infosCible-sub-player {
+    -fx-alignment: center;
+    -fx-min-height: 15;
+}
+
+.infosSource-sub-player-text, .infosCible-sub-player-text {
+    -fx-fill: white;
+}
+
+.infosSource-sub-unit, .infosCible-sub-unit {
+    -fx-fill: lightgray;
+    -fx-font-size: 15px;
+}
+
+.infosSource-sub-p, .infosCible-sub-p {
+    -fx-min-height: 25;
+}
+
+.infosSource-sub-units, .infosCible-sub-units {
+    -fx-alignment: center-left;
+}
+
+.infosSource-sub-unit, .infosCible-sub-unit {
+    -fx-alignment: center-left;
+}
+
+.infosSource-sub-unit-text, .infosCible-sub-unit-text {
+    -fx-fill: lightgray;
+    -fx-font-weight: bold;
+}
+
+.gameBarMiddle {
+    -fx-background-color: lightgray;
+    -fx-min-height: 120;
+    -fx-padding: 7;
+    -fx-background-radius: 3;
+}
